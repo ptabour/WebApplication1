@@ -10,6 +10,7 @@ namespace WebApplication1.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Msg = "Hello World.";
             return View();
         }
 
@@ -19,11 +20,10 @@ namespace WebApplication1.Controllers
 
             return View();
         }
-
-        public ActionResult Contact()
+        [HttpPost]
+        public ActionResult Contact( string name, string email, string website, string comment)
         {
-            ViewBag.Message = "Your contact page.";
-
+            
             return View();
         }
     }
